@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		E43A56261892629800559FDE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43A56251892629800559FDE /* OpenGL.framework */; };
 		E43A56281892629800559FDE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43A56271892629800559FDE /* GLUT.framework */; };
-		E43A562C1892629800559FDE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E43A562B1892629800559FDE /* main.cpp */; };
-		E43A562E1892629800559FDE /* test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E43A562D1892629800559FDE /* test.1 */; };
+		E43A5646189262B600559FDE /* fluidsim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E43A5638189262B600559FDE /* fluidsim.cpp */; };
+		E43A5647189262B600559FDE /* gluvi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E43A563A189262B600559FDE /* gluvi.cpp */; };
+		E43A5648189262B600559FDE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E43A563C189262B600559FDE /* main.cpp */; };
+		E43A5649189262B600559FDE /* openglutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E43A563D189262B600559FDE /* openglutils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,7 +22,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				E43A562E1892629800559FDE /* test.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -30,9 +31,22 @@
 		E43A56221892629700559FDE /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43A56251892629800559FDE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		E43A56271892629800559FDE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-		E43A562A1892629800559FDE /* stats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stats.h; sourceTree = "<group>"; };
-		E43A562B1892629800559FDE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		E43A562D1892629800559FDE /* test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = test.1; sourceTree = "<group>"; };
+		E43A5635189262B600559FDE /* array1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array1.h; sourceTree = "<group>"; };
+		E43A5636189262B600559FDE /* array2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array2.h; sourceTree = "<group>"; };
+		E43A5637189262B600559FDE /* array2_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array2_utils.h; sourceTree = "<group>"; };
+		E43A5638189262B600559FDE /* fluidsim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fluidsim.cpp; sourceTree = "<group>"; };
+		E43A5639189262B600559FDE /* fluidsim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fluidsim.h; sourceTree = "<group>"; };
+		E43A563A189262B600559FDE /* gluvi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gluvi.cpp; sourceTree = "<group>"; };
+		E43A563B189262B600559FDE /* gluvi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gluvi.h; sourceTree = "<group>"; };
+		E43A563C189262B600559FDE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E43A563D189262B600559FDE /* openglutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = openglutils.cpp; sourceTree = "<group>"; };
+		E43A563E189262B600559FDE /* openglutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openglutils.h; sourceTree = "<group>"; };
+		E43A5640189262B600559FDE /* blas_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blas_wrapper.h; sourceTree = "<group>"; };
+		E43A5641189262B600559FDE /* pcg_solver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pcg_solver.h; sourceTree = "<group>"; };
+		E43A5642189262B600559FDE /* sparse_matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sparse_matrix.h; sourceTree = "<group>"; };
+		E43A5643189262B600559FDE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E43A5644189262B600559FDE /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		E43A5645189262B600559FDE /* vec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +65,7 @@
 		E43A56191892629700559FDE = {
 			isa = PBXGroup;
 			children = (
-				E43A56291892629800559FDE /* test */,
+				E43A5634189262B600559FDE /* src */,
 				E43A56241892629800559FDE /* Frameworks */,
 				E43A56231892629700559FDE /* Products */,
 			);
@@ -74,14 +88,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E43A56291892629800559FDE /* test */ = {
+		E43A5634189262B600559FDE /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E43A562A1892629800559FDE /* stats.h */,
-				E43A562B1892629800559FDE /* main.cpp */,
-				E43A562D1892629800559FDE /* test.1 */,
+				E43A5635189262B600559FDE /* array1.h */,
+				E43A5636189262B600559FDE /* array2.h */,
+				E43A5637189262B600559FDE /* array2_utils.h */,
+				E43A5638189262B600559FDE /* fluidsim.cpp */,
+				E43A5639189262B600559FDE /* fluidsim.h */,
+				E43A563A189262B600559FDE /* gluvi.cpp */,
+				E43A563B189262B600559FDE /* gluvi.h */,
+				E43A563C189262B600559FDE /* main.cpp */,
+				E43A563D189262B600559FDE /* openglutils.cpp */,
+				E43A563E189262B600559FDE /* openglutils.h */,
+				E43A563F189262B600559FDE /* pcgsolver */,
+				E43A5643189262B600559FDE /* README.md */,
+				E43A5644189262B600559FDE /* util.h */,
+				E43A5645189262B600559FDE /* vec.h */,
 			);
-			path = test;
+			path = src;
+			sourceTree = "<group>";
+		};
+		E43A563F189262B600559FDE /* pcgsolver */ = {
+			isa = PBXGroup;
+			children = (
+				E43A5640189262B600559FDE /* blas_wrapper.h */,
+				E43A5641189262B600559FDE /* pcg_solver.h */,
+				E43A5642189262B600559FDE /* sparse_matrix.h */,
+			);
+			path = pcgsolver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43A562C1892629800559FDE /* main.cpp in Sources */,
+				E43A5647189262B600559FDE /* gluvi.cpp in Sources */,
+				E43A5646189262B600559FDE /* fluidsim.cpp in Sources */,
+				E43A5648189262B600559FDE /* main.cpp in Sources */,
+				E43A5649189262B600559FDE /* openglutils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
